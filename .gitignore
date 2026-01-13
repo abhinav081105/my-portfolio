@@ -37,3 +37,4 @@ logs/
 coverage/
 .cache/
 __pycache__/
+.vercel

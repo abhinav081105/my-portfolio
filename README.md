@@ -15,6 +15,25 @@ How to publish (web-only):
 4. In the repo Settings → Pages set Source to `main` / (root) and Save — the site URL will appear.
 
 Automatic deploy via GitHub Actions: this repo includes a workflow that deploys the repository root to GitHub Pages on pushes to `main`.
+
+Vercel deployment
+-----------------
+You can deploy quickly with Vercel (recommended for previews and custom domains).
+
+Web (recommended):
+1. Go to https://vercel.com and sign in with your GitHub account.
+2. Click "New Project" → Import Git Repository → choose `abhinav081105/my-portfolio`.
+3. Framework Preset: `Other` (no build). Build Command: leave empty. Output Directory: `/`.
+4. Click Deploy — Vercel will build and publish; a project URL will be provided.
+
+CLI (alternate):
+1. Install Vercel CLI: `npm i -g vercel`.
+2. From this project folder run `vercel login` then `vercel` and follow prompts.
+
+Notes:
+- The repository includes `vercel.json` which tells Vercel to serve `index.html` and fallback routes to the root (SPA-friendly).
+- Use Vercel's Settings → Domains to add a custom domain and configure automatic HTTPS.
+
 # Portfolio Website - Mantripragada Rama Naga Sai Abhinav
 
 A modern, dark-themed personal portfolio website showcasing full-stack web development projects and technical expertise. Built with HTML5, CSS3, JavaScript, and featuring advanced 3D animations using Three.js.
