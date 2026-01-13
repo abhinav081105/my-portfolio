@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhinav | Full-Stack Developer & CSE Student</title>
+    <meta name="description" content="Portfolio of Mantripragada Rama Naga Sai Abhinav - Final-year CSE student specializing in full-stack web development and educational software solutions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%230A74DA' font-family='monospace'>&lt;/&gt;</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="code-accent">&lt;</span>Abhinav<span class="code-accent">/&gt;</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background" id="heroCanvas"></div>
+        <div class="hero-content">
+            <div class="hero-text fade-in">
+                <!-- Welcome Badge -->
+                <div class="welcome-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Welcome to my portfolio</span>
+                </div>
+
+                <!-- Hero Greeting -->
+                <p class="hero-greeting">Hi there, I'm</p>
+
+                <!-- Hero Title with blue accent -->
+                <h1 class="hero-title">
+                    <span class="name-blue">Mantripragada</span>
+                    <br>
+                    <span class="name-white">Abhinav</span>
+                </h1>
+
+                <!-- Role Tags -->
+                <div class="role-tags">
+                    <span class="role-tag">Final-Year CSE Student</span>
+                    <span class="role-dot">•</span>
+                    <span class="role-tag">Full-Stack Developer</span>
+                </div>
+
+                <!-- Description -->
+                <p class="hero-description">Building practical web applications and software solutions for educational institutions. <strong>Passionate about creating systems that make a real difference.</strong></p>
+
+                <!-- CTA Buttons -->
+                <div class="hero-cta">
+                    <button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+                        <span>View Projects</span>
+                        <span class="btn-arrow">↓</span>
+                    </button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contact Me</button>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div class="hero-image">
+                <!-- Code snippets around profile -->
+                <div class="code-snippet top-left">
+                    <span class="code-tag">&lt;Developer /&gt;</span>
+                </div>
+                <div class="code-snippet top-right">
+                    <span class="code-tag">React • Node.js</span>
+                </div>
+
+                <!-- Profile Circle -->
+                <div class="profile-placeholder">
+                    <img src="assets/images/profile.jpg" alt="Profile photo of Abhinav" loading="lazy">
+                    
+                    <!-- Open to Work Badge -->
+                    <div class="open-to-work">
+                        <span class="status-dot"></span>
+                        <span>Open to Work</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <p>SCROLL TO EXPLORE</p>
+            <div class="scroll-dot"></div>
+        </div>
+
+        <!-- Bottom Social Icons -->
+        <div class="hero-socials">
+            <a href="https://github.com/abhinav081105" target="_blank" title="GitHub" class="social-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/abhinav-mantripragada-927a3b2a8/" target="_blank" title="LinkedIn" class="social-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <h2 class="section-title"><span class="code-accent">01.</span> About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a final-year Computer Science Engineering student at <strong>Lendi Institute of Engineering & Technology</strong>, passionate about creating real-world software solutions that solve practical problems for educational institutions.</p>
+                    
+                    <p>My focus lies in <strong>full-stack web development</strong>, where I design and build systems like attendance portals, roll management platforms, and inventory tracking solutions. I'm deeply interested in <strong>cybersecurity fundamentals</strong>, <strong>DevOps culture</strong>, and building <strong>scalable systems</strong> that can handle real-world demands.</p>
+                    
+                    <p>I believe in learning by doing—my projects reflect hands-on experience with modern technologies and a commitment to clean, maintainable code.</p>
+                </div>
+                
+                <div class="about-info">
+                    <div class="info-card">
+                        <h3>Education</h3>
+                        <p class="info-value">B.Tech in Computer Science Engineering</p>
+                        <p class="info-label">Lendi Institute of Engineering & Technology</p>
+                        <p class="info-label">Admitted: 2023 | Expected Graduation: 2027</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Focus Areas</h3>
+                        <ul class="focus-list">
+                            <li>Full-Stack Web Development</li>
+                            <li>Backend Systems Design</li>
+                            <li>Cybersecurity & Network Fundamentals</li>
+                            <li>Scalable Software Architecture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section-padding">
+        <div class="container">
+            <div class="skills-header">
+                <p class="skills-label">MY SKILLS</p>
+                <h2 class="skills-title">Technical <span class="accent">Expertise</span></h2>
+                <p class="skills-description">A diverse set of skills spanning full-stack development, database management, and core computer science fundamentals.</p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        <h3 class="skill-card-title">Programming Languages</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">C</span>
+                                <span class="skill-percentage">78%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 78%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Assembly</span>
+                                <span class="skill-percentage">58%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 58%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web & Backend -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                        <h3 class="skill-card-title">Web & Backend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Firebase</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">NoSQL DBs</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database Management -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="9"></line>
+                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                        </svg>
+                        <h3 class="skill-card-title">Database Management</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 88%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Firebase Realtime DB</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Data Modeling</span>
+                                <span class="skill-percentage">78%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 78%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Admin Management</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core CS Knowledge -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <path d="M12 8c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                        </svg>
+                        <h3 class="skill-card-title">Core CS Knowledge</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Computer Networks</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Operating Systems</span>
+                                <span class="skill-percentage">76%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 76%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">DSA</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">TCP/IP, IPv6</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path>
+                        </svg>
+                        <h3 class="skill-card-title">Cybersecurity</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Security Fundamentals</span>
+                                <span class="skill-percentage">65%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Network Security</span>
+                                <span class="skill-percentage">68%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 68%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Packet Analysis</span>
+                                <span class="skill-percentage">78%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 78%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">CSMA/ALOHA</span>
+                                <span class="skill-percentage">65%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l-5.5 9h11z"></path>
+                            <path d="M3.5 13h17"></path>
+                        </svg>
+                        <h3 class="skill-card-title">Tools & Platforms</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Git/GitHub</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">VS Code</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Packet Tracer</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Linux</span>
+                                <span class="skill-percentage">78%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 78%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section-padding">
+        <div class="container">
+            <h2 class="section-title"><span class="code-accent">03.</span> Featured Projects</h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1: Roll Number Management -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">College Roll Number Management System</h3>
+                        <span class="project-year">2026</span>
+                    </div>
+                    <p class="project-description">
+                        A dynamic admin-based system for generating batch-wise roll numbers with support for lateral entry and detained students. Features role-based dashboards and CR assignment capabilities.
+                    </p>
+                    <div class="project-problem">
+                        <strong>Challenge:</strong> Automate complex roll number generation across multiple batches and student categories
+                    </div>
+                    <div class="project-solution">
+                        <strong>Solution:</strong> Built an intuitive admin dashboard with configurable rules and real-time processing
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/abhinav081105" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Attendance Portal -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Attendance Marking Portal</h3>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <p class="project-description">
+                        Manages attendance for 280+ students with section-wise handling. Supports Present, Absent, and Permission options with comprehensive summary generation and export features.
+                    </p>
+                    <div class="project-problem">
+                        <strong>Challenge:</strong> Handle large-scale attendance tracking with multiple sections and export requirements
+                    </div>
+                    <div class="project-solution">
+                        <strong>Solution:</strong> Developed a scalable system with batch processing and automated reporting
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/abhinav081105" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3: QR Inventory -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">QR-Based Inventory Tracker</h3>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <p class="project-description">
+                        QR code-based stock scanning and inventory management system designed for fast tracking and real-time updates with a full-stack JavaScript approach.
+                    </p>
+                    <div class="project-problem">
+                        <strong>Challenge:</strong> Create a fast, efficient inventory system with minimal learning curve
+                    </div>
+                    <div class="project-solution">
+                        <strong>Solution:</strong> Implemented QR scanning with real-time database synchronization
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">QR Code API</span>
+                        <span class="tech-badge">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/abhinav081105" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="services-header">
+                <p class="services-label">SERVICES</p>
+                <h2 class="services-title">What I <span class="accent">Offer</span></h2>
+                <p class="services-description">Practical, scalable, and student-focused solutions tailored to your needs.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        <h3 class="service-card-title">Full-Stack Web Development</h3>
+                    </div>
+                    <p class="service-description">End-to-end web application development using modern technologies. From responsive frontends to robust backend systems.</p>
+                    <div class="service-tags">
+                        <span class="tag">Responsive Design</span>
+                        <span class="tag">Modern UI/UX</span>
+                        <span class="tag">Performance Optimized</span>
+                    </div>
+                    <a href="#contact" class="learn-more">Learn More <span>→</span></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                        <h3 class="service-card-title">Backend Development</h3>
+                    </div>
+                    <p class="service-description">Scalable server-side solutions with Firebase and NoSQL databases. API development and cloud integration.</p>
+                    <div class="service-tags">
+                        <span class="tag">Firebase Integration</span>
+                        <span class="tag">RESTful APIs</span>
+                        <span class="tag">Cloud Functions</span>
+                    </div>
+                    <a href="#contact" class="learn-more">Learn More <span>→</span></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="9"></line>
+                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                        </svg>
+                        <h3 class="service-card-title">Database Management</h3>
+                    </div>
+                    <p class="service-description">Database design, management, and optimization for MongoDB. Data modeling and admin-level operations.</p>
+                    <div class="service-tags">
+                        <span class="tag">Schema Design</span>
+                        <span class="tag">Query Optimization</span>
+                        <span class="tag">Data Migration</span>
+                    </div>
+                    <a href="#contact" class="learn-more">Learn More <span>→</span></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path>
+                        </svg>
+                        <h3 class="service-card-title">Academic Project Support</h3>
+                    </div>
+                    <p class="service-description">Helping students build practical web projects for academic requirements. Mentoring and code review.</p>
+                    <div class="service-tags">
+                        <span class="tag">Project Guidance</span>
+                        <span class="tag">Code Review</span>
+                        <span class="tag">Documentation</span>
+                    </div>
+                    <a href="#contact" class="learn-more">Learn More <span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section-padding">
+        <div class="container">
+            <h2 class="section-title"><span class="code-accent">05.</span> Experience</h2>
+            
+            <div class="experience-content">
+                <div class="experience-intro">
+                    <p class="highlight">While formal internships are yet to come, I've built substantial hands-on experience through academic projects and self-driven initiatives.</p>
+                </div>
+
+                <div class="experience-list">
+                    <div class="experience-grid">
+                        <article class="exp-card" data-role="network">
+                            <div class="exp-icon">
+                                <svg viewBox="0 0 64 64" data-animate>
+                                    <circle cx="32" cy="32" r="20" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="2"></circle>
+                                    <path d="M32 12v8M32 44v8M12 32h8M44 32h8M20 20l6 6M38 38l6 6M20 44l6-6M38 26l6-6" stroke="url(#grad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                                    <defs>
+                                        <linearGradient id="grad1" x1="0" x2="1">
+                                            <stop offset="0%" stop-color="#0A74DA" />
+                                            <stop offset="50%" stop-color="#00E5FF" />
+                                            <stop offset="100%" stop-color="#7C4DFF" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="exp-body">
+                                <h3>Network Configuration & Security</h3>
+                                <p class="experience-desc">Configured complex network topologies using Cisco Packet Tracer, implementing TCP/IP, IPv6, CSMA, and ALOHA protocols with hands-on understanding of network fundamentals.</p>
+                            </div>
+                        </article>
+
+                        <article class="exp-card" data-role="fullstack">
+                            <div class="exp-icon">
+                                <svg viewBox="0 0 64 64" data-animate>
+                                    <rect x="8" y="16" width="48" height="32" rx="4" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="2"></rect>
+                                    <path d="M16 24h32M16 32h32M16 40h20" stroke="url(#grad2)" stroke-width="2" stroke-linecap="round" fill="none"></path>
+                                    <defs>
+                                        <linearGradient id="grad2" x1="0" x2="1">
+                                            <stop offset="0%" stop-color="#0A74DA" />
+                                            <stop offset="50%" stop-color="#00E5FF" />
+                                            <stop offset="100%" stop-color="#7C4DFF" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="exp-body">
+                                <h3>Full-Stack Web Systems Development</h3>
+                                <p class="experience-desc">Designed and deployed multiple web-based systems for attendance tracking and roll management, handling 280+ students with real-time data synchronization and reporting.</p>
+                            </div>
+                        </article>
+
+                        <article class="exp-card" data-role="qr">
+                            <div class="exp-icon">
+                                <svg viewBox="0 0 64 64" data-animate>
+                                    <rect x="6" y="6" width="14" height="14" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="2"></rect>
+                                    <rect x="44" y="6" width="14" height="14" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="2"></rect>
+                                    <rect x="6" y="44" width="14" height="14" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="2"></rect>
+                                    <path d="M30 30h4v4h-4zM36 30h4v4h-4zM30 36h4v4h-4z" stroke="url(#grad3)" stroke-width="2" fill="none"></path>
+                                    <defs>
+                                        <linearGradient id="grad3" x1="0" x2="1">
+                                            <stop offset="0%" stop-color="#0A74DA" />
+                                            <stop offset="50%" stop-color="#00E5FF" />
+                                            <stop offset="100%" stop-color="#7C4DFF" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="exp-body">
+                                <h3>QR-Based Inventory Management</h3>
+                                <p class="experience-desc">Built complete inventory tracking solution with QR code integration, database management, and real-time updates for efficient stock monitoring.</p>
+                            </div>
+                        </article>
+
+                        <article class="exp-card" data-role="growth">
+                            <div class="exp-icon">
+                                <svg viewBox="0 0 64 64" data-animate>
+                                    <path d="M12 44c6-12 18-20 28-20" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="2"></path>
+                                    <circle cx="12" cy="44" r="3" fill="url(#grad4)"></circle>
+                                    <circle cx="40" cy="28" r="3" fill="url(#grad4)"></circle>
+                                    <defs>
+                                        <linearGradient id="grad4" x1="0" x2="1">
+                                            <stop offset="0%" stop-color="#0A74DA" />
+                                            <stop offset="50%" stop-color="#00E5FF" />
+                                            <stop offset="100%" stop-color="#7C4DFF" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="exp-body">
+                                <h3>Continuous Learning & Growth</h3>
+                                <p class="experience-desc">Actively pursuing knowledge in DevOps culture, cybersecurity, and scalable system architecture through projects and self-study.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <h2 class="section-title"><span class="code-accent">06.</span> Get In Touch</h2>
+
+            <div class="contact-content modern-contact">
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="card-head">
+                            <h3>Contact</h3>
+                            <p>Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="contact-item email">
+                                <svg viewBox="0 0 24 24" class="ci"><path d="M2 6.5v11A2.5 2.5 0 0 0 4.5 20h15a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 19.5 4h-15A2.5 2.5 0 0 0 2 6.5z" fill="none" stroke="currentColor" stroke-width="1.2"></path><path d="M22 6l-10 7L2 6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+                                <div>
+                                    <div class="label">Email</div>
+                                    <a href="mailto:mantripragadaabhinav@gmail.com" class="contact-link">mantripragadaabhinav@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item phone">
+                                <svg viewBox="0 0 24 24" class="ci"><path d="M22 16.92V21a1 1 0 0 1-1.11 1 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2 3.11 1 1 0 0 1 3 2h4.09a1 1 0 0 1 1 .75 12.36 12.36 0 0 0 .7 2.81 1 1 0 0 1-.24 1l-1.5 1.5a16 16 0 0 0 6 6l1.5-1.5a1 1 0 0 1 1-.24 12.36 12.36 0 0 0 2.81.7 1 1 0 0 1 .75 1V22z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+                                <div>
+                                    <div class="label">Phone</div>
+                                    <a href="tel:+918185923808" class="contact-link">+91 8185923808</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item social">
+                                <svg viewBox="0 0 24 24" class="ci"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+                                <div>
+                                    <div class="label">Social</div>
+                                    <div class="social-buttons">
+                                        <a class="social-btn" href="https://github.com/abhinav081105" target="_blank">GitHub</a>
+                                        <a class="social-btn" href="https://www.linkedin.com/in/abhinav-mantripragada-927a3b2a8/" target="_blank">LinkedIn</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container modern-form">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-grid">
+                            <div class="form-group floating">
+                                <input type="text" id="name" name="name" placeholder=" " required>
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="form-group floating">
+                                <input type="text" id="subject" name="subject" placeholder=" " required>
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="form-group floating full">
+                                <input type="email" id="email" name="email" placeholder=" " required>
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-group floating full">
+                                <textarea id="message" name="message" rows="6" placeholder=" " required></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary send-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Mantripragada Rama Naga Sai Abhinav. All rights reserved.</p>
+            <p>Crafted with <span class="heart">❤</span> using HTML5, CSS3, and JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Lenis Smooth Scrolling (2026 standard) -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/three-setup.js"></script>
+    <!-- Lenis + ScrollTimeline integration & fallback -->
+    <script src="js/lenis-scrolltimeline.js"></script>
+</body>
+</html>
