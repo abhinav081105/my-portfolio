@@ -438,32 +438,9 @@ function animateElement(element, animationName = 'wobble') {
 
 // =====================================================
 // 13. PARALLAX MOUSE TRACKING
+// Hero parallax is handled by the RAF loop in three-setup.js
+// (removed duplicate MouseTracker that was causing layout thrash)
 // =====================================================
-
-class MouseTracker {
-    constructor() {
-        this.mouseX = 0;
-        this.mouseY = 0;
-        this.init();
-    }
-
-    init() {
-        document.addEventListener('mousemove', (e) => {
-            this.mouseX = (e.clientX / window.innerWidth) * 100;
-            this.mouseY = (e.clientY / window.innerHeight) * 100;
-            this.updateEffect();
-        });
-    }
-
-    updateEffect() {
-        const heroContent = document.querySelector('.hero-content');
-        if (heroContent) {
-            const offsetX = (this.mouseX - 50) * 0.3;
-            const offsetY = (this.mouseY - 50) * 0.3;
-            heroContent.style.transform = `perspective(1200px) rotateX(${offsetY * -0.05}deg) rotateY(${offsetX * 0.05}deg) translateZ(0)`;
-        }
-    }
-}
 
 // =====================================================
 // 14. SCROLL TO TOP BUTTON
@@ -598,7 +575,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Skill fill animation is handled by the scroll-trigger IntersectionObserver
     // which animates `.skill-fill` when they enter the viewport.
     createScrollToTopButton();
-    new MouseTracker();
     new CardTilt();
     
     // Add stagger animation delays to cards
