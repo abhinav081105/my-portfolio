@@ -3,21 +3,21 @@
    ===================================================== */
 
 :root {
-    --primary-color: #0A74DA;
-    --dark-bg: #0d1117;
-    --dark-bg-secondary: #161b22;
-    --dark-border: #30363d;
-    --text-primary: #c9d1d9;
-    --text-secondary: #8b949e;
-    --text-tertiary: #6e7681;
-    --accent-blue: #0A74DA;
-    --hover-state: #1f6feb;
-    --success-color: #3fb950;
-    --error-color: #f85149;
-    --accent-cyan: #00E5FF;
-    --accent-purple: #7C4DFF;
-    --accent-gradient: linear-gradient(90deg, var(--accent-blue) 0%, var(--accent-cyan) 50%, var(--accent-purple) 100%);
-    --accent-glow: 0 8px 30px rgba(10,116,218,0.12);
+    --primary-color: #22D3EE;
+    --dark-bg: #0A0A12;
+    --dark-bg-secondary: #0F172A;
+    --dark-border: rgba(167, 139, 250, 0.2);
+    --text-primary: #FFFFFF;
+    --text-secondary: #9CA3AF;
+    --text-tertiary: #6B7280;
+    --accent-blue: #22D3EE;
+    --hover-state: #A78BFA;
+    --success-color: #10B981;
+    --error-color: #EF4444;
+    --accent-cyan: #22D3EE;
+    --accent-purple: #A78BFA;
+    --accent-gradient: linear-gradient(135deg, #22D3EE 0%, #A78BFA 100%);
+    --accent-glow: 0 8px 32px rgba(34, 211, 238, 0.15);
     
     --transition-base: 0.3s ease;
     --transition-slow: 0.5s ease;
@@ -132,7 +132,7 @@ html {
 
 body {
     font-family: var(--font-body);
-    background-color: #0a0d18; /* matches hero — seamless transition to galaxy */
+    background-color: var(--dark-bg); /* matches hero — seamless transition to galaxy */
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
@@ -163,29 +163,29 @@ section {
 .exp-card,
 .info-card,
 .contact-card {
-    background: rgba(5, 8, 22, 0.72) !important;
-    backdrop-filter: blur(16px) saturate(1.5);
-    -webkit-backdrop-filter: blur(16px) saturate(1.5);
-    border: 1px solid rgba(10, 116, 218, 0.15) !important;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.04);
+    background: rgba(26, 16, 61, 0.45) !important;
+    backdrop-filter: blur(12px) saturate(1.8);
+    -webkit-backdrop-filter: blur(12px) saturate(1.8);
+    border: 1px solid rgba(167, 139, 250, 0.25) !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.03);
 }
 
 /* Section headings get a subtle glow-shadow for readability */
 .section-title,
 .skills-title,
 .services-title {
-    text-shadow: 0 0 40px rgba(10,116,218,0.4), 0 2px 8px rgba(0,0,0,0.8);
+    text-shadow: 0 0 30px rgba(34, 211, 238, 0.3), 0 2px 8px rgba(0,0,0,0.8);
 }
 
 /* About section text background for readability */
 .about-text,
 .experience-intro {
-    background: rgba(5, 8, 22, 0.60);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 1.5rem;
     border-radius: 12px;
-    border: 1px solid rgba(10,116,218,0.10);
+    border: 1px solid rgba(34, 211, 238, 0.15);
 }
 
 /* =====================================================
@@ -325,7 +325,7 @@ section {
     padding-top: 60px;
     overflow: hidden;
     /* Block galaxy canvas — hero uses its own Three.js 3D background */
-    background: #0a0d18;
+    background: var(--dark-bg);
     z-index: 2; /* sit above the galaxy canvas (z-index: 0) */
 }
 
@@ -337,7 +337,7 @@ section {
     left: 0;
     width: 100%;
     height: 180px;
-    background: linear-gradient(to bottom, transparent 0%, #0a0d18 100%);
+    background: linear-gradient(to bottom, transparent 0%, var(--dark-bg) 100%);
     z-index: 5;
     pointer-events: none;
 }
@@ -803,7 +803,7 @@ section {
 .btn-primary:hover {
     background-color: var(--hover-state);
     border-color: var(--hover-state);
-    box-shadow: 0 0 20px rgba(10, 116, 218, 0.4);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
     transform: translateY(-2px);
 }
 
@@ -813,7 +813,7 @@ section {
 }
 
 .btn-secondary:hover {
-    background-color: rgba(10, 116, 218, 0.1);
+    background-color: rgba(34, 211, 238, 0.1);
     border-color: var(--hover-state);
     color: var(--hover-state);
     transform: translateY(-2px);

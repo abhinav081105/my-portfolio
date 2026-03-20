@@ -18,7 +18,7 @@ function initThreeJsBackground() {
 
     // Scene setup
     const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x0d1117, 0.02);
+    scene.fog = new THREE.FogExp2(0x0A0A12, 0.02);
     
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: "high-performance" });
@@ -35,10 +35,10 @@ function initThreeJsBackground() {
     
     // Cyberpunk color palette
     const colors = [
-        new THREE.Color(0x0A74DA), // Primary Blue
-        new THREE.Color(0x00E5FF), // Cyan
-        new THREE.Color(0x7C4DFF), // Purple
-        new THREE.Color(0x1f6feb)  // Hover Blue
+        new THREE.Color(0x22D3EE), // Cyan
+        new THREE.Color(0xA78BFA), // Purple
+        new THREE.Color(0x0891B2), // Dark Cyan
+        new THREE.Color(0x7C3AED)  // Dark Purple
     ];
 
     for(let i = 0; i < particleCount * 3; i+=3) {
@@ -96,10 +96,10 @@ function initThreeJsBackground() {
     const artifacts = [];
     const artifactGeo = new THREE.IcosahedronGeometry(0.5, 0);
     const artifactMat = new THREE.MeshBasicMaterial({
-        color: 0x00E5FF,
+        color: 0x22D3EE,
         wireframe: true,
         transparent: true,
-        opacity: 0.4,
+        opacity: 0.5,
         blending: THREE.AdditiveBlending
     });
     for(let i=0; i<8; i++) {

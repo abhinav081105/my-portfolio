@@ -107,9 +107,9 @@
             oc.restore();
         }
 
-        paintCloud(  0,          0,          R * 1.3, R * 0.6,  245, 0.20);
-        paintCloud(  R * 0.25,   R * 0.08,   R * 0.9, R * 0.4,  280, 0.16);
-        paintCloud( -R * 0.30,  -R * 0.12,   R * 0.8, R * 0.35, 210, 0.14);
+        paintCloud(  0,          0,          R * 1.3, R * 0.6,  185, 0.20); // Cyan
+        paintCloud(  R * 0.25,   R * 0.08,   R * 0.9, R * 0.4,  260, 0.16); // Purple
+        paintCloud( -R * 0.30,  -R * 0.12,   R * 0.8, R * 0.35, 190, 0.14); // Cyan (secondary)
 
         // ── Spiral arms (perspective tilt via scale) ──────────────────────────
         oc.save();
@@ -117,10 +117,10 @@
         oc.scale(1.0, 0.48);
 
         const ARMS = [
-            { offset: 0,              hueMin: 310, hueMax: 350, count: 2800 },
-            { offset: Math.PI,        hueMin: 200, hueMax: 260, count: 2800 },
-            { offset: 0.6,            hueMin: 280, hueMax: 320, count: 1200 },
-            { offset: Math.PI + 0.6,  hueMin: 190, hueMax: 220, count: 1200 },
+            { offset: 0,              hueMin: 180, hueMax: 195, count: 2800 }, // Cyan Arm
+            { offset: Math.PI,        hueMin: 250, hueMax: 275, count: 2800 }, // Purple Arm
+            { offset: 0.6,            hueMin: 185, hueMax: 200, count: 1200 }, // Cyan secondary
+            { offset: Math.PI + 0.6,  hueMin: 260, hueMax: 280, count: 1200 }, // Purple secondary
         ];
 
         ARMS.forEach(arm => {
@@ -261,7 +261,7 @@
         ctx.clearRect(0, 0, W, H);
 
         // ── Deep space background (single fillRect, no gradient per frame) ────
-        ctx.fillStyle = '#0a0d18';
+        ctx.fillStyle = '#0A0A12';
         ctx.fillRect(0, 0, W, H);
 
         // ── Background stars (plain arcs — very cheap) ────────────────────────
