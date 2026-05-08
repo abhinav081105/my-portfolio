@@ -3,29 +3,40 @@
 import { motion } from "framer-motion";
 import { Code2, Database, Layout, Lightbulb } from "lucide-react";
 
+import { usePortfolioMode } from "../context/PortfolioModeContext";
+
 export default function Services() {
-  const services = [
-    {
-      title: "Full-Stack Web Dev",
-      description: "End-to-end web application development using modern technologies. From responsive frontends to robust backend systems.",
-      icon: Layout
-    },
-    {
-      title: "Backend Development",
-      description: "Scalable server-side solutions with Firebase and NoSQL databases. API development and cloud integration.",
-      icon: Code2
-    },
-    {
-      title: "Database Management",
-      description: "Database design, management, and optimization for MongoDB. Data modeling and admin-level operations.",
-      icon: Database
-    },
-    {
-      title: "Academic Support",
-      description: "Helping students build practical web projects for academic requirements. Mentoring and code review.",
-      icon: Lightbulb
-    }
-  ];
+  const { mode } = usePortfolioMode();
+
+  const servicesData = {
+    developer: [
+      { title: "Full-Stack Web Dev", description: "End-to-end web application development using modern technologies. From responsive frontends to robust backend systems.", icon: Layout },
+      { title: "Backend Development", description: "Scalable server-side solutions with Node.js and SQL/NoSQL databases. API development and cloud integration.", icon: Code2 },
+      { title: "Database Management", description: "Database design, management, and optimization. Data modeling and admin-level operations.", icon: Database },
+      { title: "Academic Mentorship", description: "Helping students build practical web projects for academic requirements. Mentoring and code review.", icon: Lightbulb }
+    ],
+    devops: [
+      { title: "CI/CD Pipeline Setup", description: "Designing and implementing automated continuous integration and deployment pipelines using GitHub Actions and Jenkins.", icon: Layout },
+      { title: "Cloud Infrastructure", description: "Provisioning and managing scalable cloud infrastructure using Infrastructure as Code (Terraform) and AWS.", icon: Code2 },
+      { title: "Containerization", description: "Dockerizing applications and managing container orchestration platforms like Kubernetes.", icon: Database },
+      { title: "System Monitoring", description: "Setting up robust monitoring, logging, and alerting systems using Prometheus and Grafana.", icon: Lightbulb }
+    ],
+    network: [
+      { title: "Network Design", description: "Designing secure, scalable, and highly available enterprise network architectures.", icon: Layout },
+      { title: "Security & Firewalls", description: "Implementing robust firewall policies, VPNs, and access control mechanisms to secure infrastructure.", icon: Code2 },
+      { title: "Protocol Analysis", description: "Deep packet inspection, network troubleshooting, and performance optimization using Wireshark.", icon: Database },
+      { title: "Server Administration", description: "Managing and configuring Linux/Windows servers, Active Directory, and domain services.", icon: Lightbulb }
+    ]
+  };
+
+  const descriptions = {
+    developer: "Practical, scalable, and student-focused software solutions.",
+    devops: "Automated, scalable, and reliable infrastructure solutions.",
+    network: "Secure, performant, and highly available network solutions."
+  };
+
+  const services = servicesData[mode];
+  const description = descriptions[mode];
 
   return (
     <div className="col-span-1 md:col-span-3 lg:col-span-2 row-span-1" id="services">
@@ -41,7 +52,7 @@ export default function Services() {
             <span className="text-primary font-mono text-base">{'//'}</span> 
             <span className="text-gradient">SERVICES</span>
           </h2>
-          <p className="text-muted-foreground mt-1 text-sm">Practical, scalable, and student-focused solutions.</p>
+          <p className="text-muted-foreground mt-1 text-sm">{description}</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 relative z-10">

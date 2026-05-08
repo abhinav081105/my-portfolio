@@ -2,8 +2,53 @@
 
 import { motion } from "framer-motion";
 import { User } from "lucide-react";
+import { usePortfolioMode } from "../context/PortfolioModeContext";
 
 export default function About() {
+  const { mode } = usePortfolioMode();
+
+  const content = {
+    developer: (
+      <>
+        <p>
+          I'm a final-year Computer Science Engineering student at <strong className="text-foreground font-medium">Lendi Institute of Engineering & Technology</strong>, passionate about creating real-world software solutions that solve practical problems.
+        </p>
+        <p>
+          My focus lies in <strong className="text-foreground font-medium">full-stack web development</strong>, where I design and build systems like attendance portals, roll management platforms, and inventory tracking solutions.
+        </p>
+        <p>
+          I believe in learning by doing—my projects reflect hands-on experience with modern technologies and a commitment to clean, maintainable code architecture.
+        </p>
+      </>
+    ),
+    devops: (
+      <>
+        <p>
+          I'm a final-year Computer Science Engineering student at <strong className="text-foreground font-medium">Lendi Institute of Engineering & Technology</strong>, passionate about bridging the gap between software development and IT operations.
+        </p>
+        <p>
+          My focus lies in <strong className="text-foreground font-medium">cloud infrastructure and automation</strong>, where I orchestrate CI/CD pipelines, containerize applications, and ensure system reliability and high availability.
+        </p>
+        <p>
+          I believe in scalable architecture—my projects reflect hands-on experience with Docker, cloud providers, and a commitment to seamless, automated software delivery.
+        </p>
+      </>
+    ),
+    network: (
+      <>
+        <p>
+          I'm a final-year Computer Science Engineering student at <strong className="text-foreground font-medium">Lendi Institute of Engineering & Technology</strong>, passionate about building secure, resilient, and high-performance communication systems.
+        </p>
+        <p>
+          My focus lies in <strong className="text-foreground font-medium">network architecture and security</strong>, exploring network topologies, routing protocols, firewall management, and robust access policies.
+        </p>
+        <p>
+          I believe in reliable connectivity—my interests reflect hands-on troubleshooting, packet analysis, and a commitment to maintaining zero-downtime enterprise environments.
+        </p>
+      </>
+    ),
+  };
+
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
@@ -27,15 +72,7 @@ export default function About() {
         </div>
 
         <div className="space-y-4 text-muted-foreground text-sm leading-relaxed relative z-10">
-          <p>
-            I'm a final-year Computer Science Engineering student at <strong className="text-foreground font-medium">Lendi Institute of Engineering & Technology</strong>, passionate about creating real-world software solutions that solve practical problems for educational institutions.
-          </p>
-          <p>
-            My focus lies in <strong className="text-foreground font-medium">full-stack web development</strong>, where I design and build systems like attendance portals, roll management platforms, and inventory tracking solutions. I'm deeply interested in cybersecurity fundamentals, DevOps culture, and building scalable systems.
-          </p>
-          <p>
-            I believe in learning by doing—my projects reflect hands-on experience with modern technologies and a commitment to clean, maintainable code architecture.
-          </p>
+          {content[mode]}
         </div>
       </div>
     </motion.div>
